@@ -22,6 +22,14 @@ function FileTable ({files, fileName, mode}) {
            width={window.innerWidth - 16}
            height={400}
            rowsCount={rowsCount}>
+     <Column
+       header={<Cell>#</Cell>}
+       cell={props => (
+         <Cell {...props}>
+           {props.rowIndex}
+         </Cell>
+       )}
+       width={100} />
       {Object.keys(filedata[0]).map((n, i) =>
         <Column
           header={<Cell>{n}</Cell>}

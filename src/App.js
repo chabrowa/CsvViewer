@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import FilesViewer from './FilesViewer'
+import DataManager from './DataManager'
 import Dropzone from 'react-dropzone'
 import styles from './app.css'
 import { loadFile, loadFileData } from './FileActions'
@@ -36,6 +37,7 @@ const App = React.createClass({
                   className={ styles.dropZone }>
           Drop files or click here
         </Dropzone>
+        <DataManager />
         <FilesViewer />
       </div>
     )
